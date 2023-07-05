@@ -7,20 +7,17 @@ Forked for use with [AndroidPdfViewer](https://github.com/barteksc/AndroidPdfVie
 
 API is highly compatible with original version, only additional methods were created.
 
-## What's new in 1.9.0?
-* Updated Pdfium library to 7.1.2_r36
-* Changed `gnustl_static` to `c++_shared`
-* Update Gradle plugins
-* Update compile SDK and support library to 26
-* Change minimum SDK to 14
-* Add support for mips64
+## What's new in 1.10.0?
+* This is now using prebuild Pdfium binaries from: https://github.com/bblanchon/pdfium-binaries
+* Updated Pdfium to https://github.com/bblanchon/pdfium-binaries/releases/tag/chromium%2F5868
+* Removed support for mips since it is not present in prebuild binaries
+* Update compile SDK to 33
+* Change minimum SDK to 19
+* Added Jitpack support for builds
+* Added built versions of libpng (1.6.39) and freetype (2.13.1)
 
 ## Installation
-Add to _build.gradle_:
-
-`compile 'com.github.barteksc:pdfium-android:1.9.0'`
-
-Library is available in jcenter and Maven Central repositories.
+Library is available via [jitpack.io](https://jitpack.io). Follow instructions on [jitpack](https://jitpack.io/#tibbi/PdfiumAndroid)
 
 ## Methods inconsistency
 Version 1.8.0 added method for getting page size - `PdfiumCore#getPageSize(...)`.
